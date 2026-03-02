@@ -29,6 +29,7 @@ Este repositorio contiene un flujo de trabajo (pipeline) automatizado para la **
 ├── requirements.txt           # 📦 Dependencias mínimas
 ├── extract_requirements.py    # 🚀 Script 2: Interacción con la API de Ollama
 └── consolidate_results.py     # 📊 Script 1: Procesador y exportador a Excel
+```text
 
 # 🤖 LLM Requirements Elicitation & Consolidation Pipeline
 
