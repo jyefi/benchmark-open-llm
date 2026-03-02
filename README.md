@@ -6,7 +6,6 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 Este repositorio contiene un flujo de trabajo (pipeline) automatizado para la **elicitación de requisitos de ingeniería** utilizando modelos de lenguaje LLM locales y la consolidación de resultados en formatos estructurados para análisis.
-
 ---
 
 ## Características
@@ -32,9 +31,8 @@ Este repositorio contiene un flujo de trabajo (pipeline) automatizado para la **
 ```
 
 ## IMPORTANTE
-Para ejecutar la rutina de elicitación `test_models.py` se debe tener el sistema ollama instalado y se debe descargar cada uno de los modelos a utilizar.
-Para descargar los modelos se debe ejecutar:
-
+Para ejecutar la rutina de elicitación `test_models.py` se **debe** tener el sistema ollama instalado y se **debe descargar** cada uno de los modelos a utilizar.
+Para descargar los modelos se debe ejecutar (desde una ventana de terminal):
 ```
 ollama pull deepseek-r1:32b
 ollama pull gemma3:27b
