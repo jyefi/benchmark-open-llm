@@ -57,5 +57,4 @@ python procesa_salidas.py
 | :--- | :--- |
 | proceso.log | Historial técnico de errores y conexiones API. |
 | master_results.csv | Reporte de rendimiento y calidad de los modelos. Almacena los tiempos de resultado, verifica si las respuestas son válidas (no están en blanco), y agrega información de tiempos y tokens utilizado |
-
 | consolidado_final_requisitos.xlsx | Base de datos final de requisitos estructurada. |
