@@ -4,6 +4,7 @@
 ![Ollama](https://img.shields.io/badge/Ollama-Local_Inference-orange.svg)
 ![Pandas](https://img.shields.io/badge/data-pandas-150458.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18838059.svg)](https://zenodo.org/doi/10.5281/zenodo.18838059)
 
 Este repositorio contiene un flujo de trabajo (pipeline) automatizado para la **elicitación de requisitos de ingeniería** utilizando modelos de lenguaje LLM locales y la consolidación de resultados en formatos estructurados para análisis.
 ---
