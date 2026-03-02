@@ -14,7 +14,7 @@ Este repositorio contiene un flujo de trabajo (pipeline) automatizado para la **
 * **Multi-Modelo:** Soporte nativo para `deepseek-r1`, `gemma3`, `llama3.1`, `qwen3` y `gpt-oss` a través de **Ollama**.
 * **Gestión de VRAM:** Incluye rutinas de *Warm-up* (precarga) y *Unload* para optimizar el uso de la GPU.
 * **Resiliencia:** Manejo de reintentos automáticos, timeouts y logs detallados de errores.
-* **Consolidación Inteligente:** Procesa archivos `.md` y `.txt` dispersos para generar un único **Master Excel** limpio y sin duplicados.
+* **Consolidación Inteligente:** Procesa archivos `.md` y `.txt` dispersos para generar un único fichero **Excel** que consolida todos los resultados.
 
 ---
 
@@ -24,12 +24,29 @@ Este repositorio contiene un flujo de trabajo (pipeline) automatizado para la **
 .
 ├── textos/
 │   └── es/                    # descripciones de proyectos de desarrollo de Software en formato texto natural (1)
-├── salida_estudio/            # Resultado del proceso de elicitación por LLM (2)
+├── salida_estudio/            # Resultado del proceso de elicitación por LLM (2) de cada uno de los modelos por cada uno de los proyectos
 ├── prompt_es_few_shot.txt     # Prompt utilizado en el proceso (3)
 ├── requirements.txt           # Dependencias mínimas para ejecutar (4)
-├── extract_requirements.py    # Ejecuta de forma automatizada los modelos sobre el texto de los proyectos de (1) generando las salidas en (2)
-└── consolidate_results.py     # Exporta todas las salidas generadas en (2), consolidando en un solo fichero Excel
+├── test_models.py             # Ejecuta de forma automatizada los modelos sobre el texto de los proyectos de (1) generando las salidas en (2)
+└── procesa_salidas.py         # Exporta todas las salidas generadas en (2), consolidando en un solo fichero Excel
 ```
+
+## IMPORTANTE
+Para ejecutar la rutina de elicitación `test_models.py` se debe tener el sistema ollama instalado y se debe descargar cada uno de los modelos a utilizar.
+Para descargar los modelos se debe ejecutar:
+
+```
+ollama pull deepseek-r1:32b
+ollama pull gemma3:27b
+ollama pull gpt-oss:20b
+ollama pull llama3.1:70b
+ollama pull qwen3:30b
+```
+Para confirmar la correcta descarga de los modelos se puede ejecutar:
+```
+ollama list
+```
+Es comando permite listar todos los modelos instalados.
 
 ## Flujo de Ejecución
 ### Paso 1: Extracción de Requisitos
